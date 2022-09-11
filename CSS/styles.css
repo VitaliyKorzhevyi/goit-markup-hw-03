@@ -24,17 +24,23 @@
 /* Плагіни та загальні селектори */
 
 
-* {
+/* { 
     outline: 2px solid cornflowerblue;
-} 
+} */
 
-h1, h2, h3, h4, h5, h6, ul, p {
+h1, h2, h3, h4, h5, h6, ul, li, p {
     margin: 0;
 }
 
-ul {
-    padding-left: 0;
+ul{
+    padding: 0;
 }
+
+li {
+    list-style: none;
+    padding: 0;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -82,7 +88,8 @@ h2, h3 {
 }
 
 .img-doing,
-.img-team {
+.img-team,
+.img-menu {
     display: block;
 }
 
@@ -169,13 +176,17 @@ h2, h3 {
     text-align: center;
 }
 
+.banner {
+    padding: 200px 0;
+}
+
 .text-banner {
     margin: 0 auto;
-    padding-top: 200px;
     margin-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
     max-width: 696px;
+
 
     color: var(--tertiary-text-color);
     font-weight: 900;
@@ -184,16 +195,13 @@ h2, h3 {
     letter-spacing: 0.06em;
 }
 .banner-btn {
-    border-radius: 4px;
     min-width: 216px;
     height: 50px;
-    margin-bottom: 200px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 24px;
 
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
 
     color: var(--tertiary-text-color);
     background-color: var(--primary-bg-btn) ;
@@ -325,7 +333,21 @@ h2, h3 {
 /* для portfolio.html */
 /* filter */
 
+.filter-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 16px;
+    min-width: 575px;
+    margin-bottom: 34px;
+}
+
 .filter-btn {
+    min-width: 73px;
+    height: 38px;
+    border: none;
+    padding: 6px 22px;
+
     color: var(--secondary-text-color);
     background-color: var(--primary-bg-btnfilter);
 
@@ -333,20 +355,31 @@ h2, h3 {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63; 
-    letter-spacing: 0.03em;
-
     cursor: pointer;
+
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
     color: var(--primary-bg-color);
     background-color: var(--secondary-bg-btnfilter);
 }
 
 /* Контент сторінки */
 
+.main-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* border: 1px solid #EEEEEE; */
+}
+
 .main-title {
+    margin: 20px 0 4px 24px; 
+
     color: var(--secondary-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -354,8 +387,11 @@ h2, h3 {
     letter-spacing: 0.06em;
 }
 
+
+
 .main-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
+    margin-left: 24px;
 }
